@@ -291,6 +291,21 @@ section { padding: 5.5rem 0; }
   line-height: 1.8;
 }
 .about-text p strong { color: var(--platinum); font-weight: 600; }
+.headshot-wrapper {
+  margin-bottom: 1.5rem;
+}
+.headshot {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  filter: saturate(0.85) contrast(1.05);
+  transition: filter 0.4s;
+}
+.headshot:hover { filter: saturate(1) contrast(1); }
 .credentials-list { display: flex; flex-direction: column; gap: 0.75rem; }
 .credential {
   background: var(--bg-card);
@@ -868,7 +883,11 @@ footer p {
           two full years before it was enacted — and I subsequently led Citigroup's live implementation.
         </p>
       </div>
-      <div class="credentials-list fade-in">
+      <div class="fade-in" style="display: flex; flex-direction: column;">
+        <div class="headshot-wrapper">
+          <img src="/glad-1.jpeg" alt="Geol Gladson Battu" class="headshot">
+        </div>
+        <div class="credentials-list">
         <div class="credential">
           <div class="credential-icon">🏛</div>
           <div class="credential-text">
@@ -911,6 +930,7 @@ footer p {
             <p>Nation Today News — expert perspective on AI compliance.</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -1280,9 +1300,9 @@ footer p {
         </p>
       </div>
       <div class="contact-links fade-in">
-        <a href="mailto:geolgladson@gmail.com" class="contact-link">
+        <a href="/cdn-cgi/l/email-protection#a4c3c1cbc8c3c8c5c0d7cbcae4c3c9c5cdc88ac7cbc9" class="contact-link">
           <div class="cl-icon">✉</div>
-          geolgladson@gmail.com
+          <span class="__cf_email__" data-cfemail="f79092989b909b9693849899b7909a969e9bd994989a">[email&#160;protected]</span>
         </a>
         <a href="https://linkedin.com/in/geolgladsonbattu" target="_blank" rel="noopener" class="contact-link">
           <div class="cl-icon">in</div>
@@ -1312,7 +1332,7 @@ footer p {
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.getElementById('hamburger').addEventListener('click', function() {
   document.getElementById('navLinks').classList.toggle('open');
 });
@@ -1334,15 +1354,4 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
-  const currentScroll = window.pageYOffset;
-  if (currentScroll > lastScroll && currentScroll > 200) {
-    nav.style.transform = 'translateY(-100%)';
-  } else {
-    nav.style.transform = 'translateY(0)';
-  }
-  lastScroll = currentScroll;
-});
-</script>
-
-</body>
-</html>
+  const currentScroll 
